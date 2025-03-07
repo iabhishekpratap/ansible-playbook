@@ -1,0 +1,7 @@
+---
+-name : first basic playbook
+host : localhost
+
+tasks:
+  - name : test connection
+    ping:
