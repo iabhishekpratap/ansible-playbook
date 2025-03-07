@@ -5,3 +5,5 @@
   tasks:
     - name: test connection to localhost
       ping:
+    - name: "print output"
+      debug: msg="alright"
