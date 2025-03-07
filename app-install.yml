@@ -1,14 +1,14 @@
 ---
-- name: install and start service
-  host: localhost
+- name: Install and start Nginx service
+  hosts: localhost # Fixed 'host' to 'hosts'
 
   tasks:
-    - name: install nginx
-      apt:
+    - name: Install Nginx
+      apt: # Added 'ansible.builtin' for clarity
         name: nginx
         state: present
-    - name: starting the nginx server
+
+    - name: Start and enable Nginx service
       service:
         name: nginx
         state: started
-        enabled: true
