@@ -1,6 +1,6 @@
 ---
--name : first basic playbook
-host : localhost
+- name : first basic playbook
+  hosts : localhost
 
 tasks:
   - name : test connection
