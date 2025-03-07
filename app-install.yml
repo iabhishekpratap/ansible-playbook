@@ -1,4 +1,4 @@
----
+       step:---
 - name: Install and start Nginx service
   hosts: localhost # Fixed 'host' to 'hosts'
 
@@ -12,3 +12,4 @@
       service:
         name: nginx
         state: started
+ 
