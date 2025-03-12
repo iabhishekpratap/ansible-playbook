@@ -1,0 +1,9 @@
+---
+- name: copy files to remote system
+  hosts: all
+
+  tasks:
+    - name: copy files
+      copy:
+        src: /home/absk/downloads/code_1.98.0-1741124782_amd64.deb
+        dest: /home/absk/downloads/

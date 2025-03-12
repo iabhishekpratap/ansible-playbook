@@ -1,7 +1,9 @@
 ---
 - name: Test connection to localhost
-  hosts: localhost
+  hosts: all
 
   tasks:
-    - name: test connection to localhost
+    - name: test connection to servers
       ping:
+    - name: "print output"
+      debug: msg="alright"
