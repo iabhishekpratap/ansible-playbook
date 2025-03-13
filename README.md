@@ -1,4 +1,4 @@
-# Ansible Playbooks
+# Ansible Playbook
 
 ## Overview
 This repository contains Ansible playbooks for automating various tasks such as server configuration, application deployment, and infrastructure management.
