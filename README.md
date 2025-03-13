@@ -59,7 +59,7 @@ Before using these playbooks, ensure that you have the following installed:
 - Check `ansible.cfg` for configuration settings.
 - Verify SSH connectivity using:
   ```bash
-  ansible -i inventory/hosts.ini all -m ping
+  ansible all -m ping
   ```
 
 ## License
