@@ -57,10 +57,7 @@ Before using these playbooks, ensure that you have the following installed:
 ## Troubleshooting
 - To enable verbose mode for debugging, add `-vvv` to the command.
 - Check `ansible.cfg` for configuration settings.
-- Verify SSH connectivity using:
-  ```bash
-  ansible all -m ping
-  ```
+- Verify SSH connectivity 
 
 ## License
 This project is licensed under the MIT License.
