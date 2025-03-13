@@ -5,5 +5,8 @@
   tasks:
     - name: copy files
       copy:
-        src: /home/absk/downloads/code_1.98.0-1741124782_amd64.deb
+        src: /home/absk/downloads/sample.txt
         dest: /home/absk/downloads/
+        owner: root
+        mode: 0777
+        backup: true

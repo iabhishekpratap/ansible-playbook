@@ -1,0 +1,10 @@
+---
+
+- name: change permission
+  hosts: all
+
+  tasks:
+  - name: change perm
+    file:
+      path: /home/absk/temp/sample.txt
+      mode: 0777

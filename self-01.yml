@@ -1,0 +1,21 @@
+---
+- name: Create a folder and copy script to remote server
+  hosts: all # Change this to your target server group
+
+  tasks:
+    - name: Create a folder on the remote server
+      file:
+        path: /home/absk/script # Change the path as needed
+        state: directory
+        mode: "0755"
+
+    - name: Copy script from local server to remote server
+      copy:
+        src: /home/absk/ansible-playbook/script/test.sh # Change to the actual script path
+        dest: /home/absk/script # Change as needed
+        mode: "0755"
+
+    - name: Ensure execute permission for test.sh
+      file:
+        path: /home/absk/script/test.sh
+        mode: "0755"

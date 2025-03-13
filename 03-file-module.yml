@@ -1,0 +1,16 @@
+---
+- name: File module
+  hosts: all
+
+  tasks:      
+  - name: Creating file
+    file:
+      path: /home/absk/downloads/newfile.txt
+      state: absent
+      owner: absk 
+      mode: 0777
+
+  - name: creating directory
+    file:
+      path: /home/absk/sample-folder
+      state: absent

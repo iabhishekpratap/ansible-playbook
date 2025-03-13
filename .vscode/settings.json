@@ -1,5 +1,11 @@
 {
     "yaml.schemas": {
-        "https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible.json#/$defs/playbook": "file:///home/absk/ansible-playbook/first-pb.yml"
-    }
+        "file:///c%3A/Users/abhishek/.vscode/extensions/docsmsft.docs-yaml-1.0.5/dist/toc.schema.json": "/toc\\.yml/i",
+        "https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible.json#/$defs/playbook": [
+            "file:///home/absk/ansible-playbook/first-pb.yml",
+            "file:///home/absk/ansible-playbook/03-file-module.yml",
+            "file:///home/absk/ansible-playbook/apple.yml"
+        ]
+    },
+    "ansible.python.interpreterPath": "/bin/python3"
 }

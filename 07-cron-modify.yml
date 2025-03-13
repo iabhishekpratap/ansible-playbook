@@ -1,0 +1,12 @@
+---
+- name: modify cron
+  hosts: all
+
+  tasks:
+    - name: Remove test script from cron
+      cron:
+        name: run test script
+        state: absent
+        user: absk
+
+      
