@@ -1,0 +1,25 @@
+---
+- name: Stop and Uninstall Nginx Server
+  hosts: all
+
+  tasks:
+    - name: Stop Nginx Service
+      service:
+        name: nginx
+        state: stopped
+      ignore_errors: yes
+
+    - name: Remove Nginx on Ubuntu
+      apt:
+        name: nginx
+        state: absent
+        autoremove: yes
+        purge: yes
+      when: ansible_os_family == "Debian"
+
+    - name: Remove Nginx on CentOS
+      yum:
+        name: nginx
+        state: absent
+        autoremove: yes
+      when: ansible_os_family == "RedHat"

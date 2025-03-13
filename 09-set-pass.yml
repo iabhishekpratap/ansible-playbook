@@ -1,0 +1,10 @@
+---
+- name: set password
+  hosts: all
+
+  tasks:
+    - name: set password
+      user:
+        name: aps
+        update_password: always
+        password: "{{'root' | password_hash()}}"

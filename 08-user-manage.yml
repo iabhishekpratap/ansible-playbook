@@ -1,0 +1,12 @@
+---
+- name: user management
+  hosts: all
+
+  tasks:
+    - name: user creation
+      user:
+        name: aps
+        comment: new user add
+        shell: /bin/bash
+        state: absent #delete this user
+        remove: yes # it remove date of the releted user 

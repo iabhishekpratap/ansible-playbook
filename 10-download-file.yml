@@ -1,0 +1,11 @@
+---
+- name: Download a file on the remote server
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Download file from URL
+      get_url:
+        url: "https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe"
+        dest: "/home/absk/downloads"
+        mode: '0777'
