@@ -1,0 +1,23 @@
+---
+- name: Install and start any service
+  hosts: all # Fixed 'host' to 'hosts'
+  vars:
+    - app: nginx
+
+  tasks:
+    - name: Install Nginx in ubuntu
+      apt: # Added 'ansible.builtin' for clarity
+        name: "{{app}}"
+        state: present
+      when: ansible_os_family == "Debian" # this is the condition
+
+    - name: Install Nginx in centos
+      yum: # Added 'ansible.builtin' for clarity
+        name: "{{app}}"
+        state: present
+      when: ansible_os_family == "RedHat"  # this is condition
+
+    - name: Start and enable Nginx service
+      service:
+        name: "{{app}}"
+        state: started

@@ -10,7 +10,13 @@
         permanent: true
         state: enabled
 
+      notify: 
+        - reload firewalld #trigger handlers using notify
+
+  handlers: #uses to done only change happens 
+  #here the task is if firewall change then can only reload
     - name: reload firewalld
       service:
         name: firewalld
         state: reloaded
+
